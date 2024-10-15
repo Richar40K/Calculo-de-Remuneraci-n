@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1d1818;
+    background-image: url(/imagenes/Logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: #062743;
+    width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+header {
+    text-align: center;
+    color: #C4FFDD;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    color: #C4FFDD;
+    font-size: 1.1em;
+}
+
+.form-group input {
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #113A5D;
+    border-radius: 5px;
+    background-color: #113A5D;
+    color: #F9F9F9;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input:focus {
+    background-color: #C4FFDD;
+    color: #062743;
+    outline: none;
+}
+
+.checkboxes {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.checkboxes label {
+    color: #C4FFDD;
+}
+
+.buttons {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #113A5D;
+    border: none;
+    color: #C4FFDD;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #C4FFDD;
+    color: #062743;
+}
+
+button.salir {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: #FFF;
+    padding: 8px 16px;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .checkboxes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+  }
+:root{
+  --azulOscuro: #062743;
+  --azul: #113A5D;
+  --cyan: #C4FFDD;
+  --blanco: #F9F9F9;
+  --naranja: #FFA500;
+
+}  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 0;
+  text-align: center;
+  background-color: var(--azulOscuro);
+  color: var(--blanco);
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header' 
+    'left right' 
+    'footer footer';
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 64px auto 80px;
+  min-height: 100vh;
+} 
+
+.contenedor-tarjetas,
+.contenedor-login{
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+/* Style the left column */
+.contenedor-tarjetas {
+  grid-area: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+  padding:0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+  width: 33.33%;
+}
+
+.card_image {
+  position: relative;
+  max-height: 400px;
+}
+
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  position: relative;
+  padding: 16px 8px 8px 6px;
+  margin: 16px 8px 8px 0;
+  max-height: 290px;
+}
+
+.card_title {
+  position: relative;
+  margin: 0 0 24px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.card_title::after {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--naranja);
+  content: "";
+}
+
+hr {
+  margin: 24px auto;
+  width: 50px;
+  border-top: 2px solid --naranja;
+}
+
+.card_text p {
+  margin: 0 0 24px;
+  font-size: medium;
+  line-height: 1.5;
+}
+
+.card_text p:last-child {
+  margin: 0;
+}
+
+.contenedor-tarjetas::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.contenedor-login {
+  grid-area: right;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul);
+  color: var(--blanco);
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../Imagenes/remuneracionprincipal.jpg); 
+  background-size:cover;
+}
+
+.contenedor-login h2{
+  font-size: xxx-large;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--azulOscuro);
+  padding: 10px;
+  text-align: center;
+  color:var(--blanco);
+}
+ul{
+  list-style: none;
+  text-align: center;
+}
+.header img{
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+.header h1{
+  font-size: 24px;
+  margin: 0;
+}
+
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--blanco);
+  box-shadow: 0 0 0 2px var(--naranja);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: var(--blanco);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--blanco);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: var(--naranja);
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: var(--naranja);
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px var(--naranja);
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}

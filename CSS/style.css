@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    ---texto:#F9F9F9;
+    ---fondo:#062743;
+    ---colorSecundario:#113A5D;
+    ---colorTerceario:#C4FFDD;
+    --fontFamily: "Montserrat", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontFamily) !important;
+    
+}
+i {
+    font-family: "Font Awesome 5 Free" !important; 
+}
+body{
+    background: #305b7e !important;
+    color:var(---texto) !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    width: 100vw !important;
+    height: 100vh !important; 
+}
+.contenedorPes{
+    box-sizing: border-box !important;
+    background: #2049c50f !important;
+    width:95% !important;
+    height: 10vh !important;
+    margin-left: auto !important;
+}
+.encabezado{
+    box-sizing: border-box !important;
+    background: transparent !important;
+    width:100% !important;
+    height: 100% !important;
+}
+.navegacion{
+    margin-top: 5px !important;
+    box-sizing: border-box !important;
+    padding: 7px !important;
+}
+.navegacion__opciones{
+    box-sizing: border-box;
+    display: flex !important;
+    justify-content: space-between !important;
+    gap:24px !important;
+}
+.menu-item{
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1px;
+}
+.menu-item > a:focus{
+    width: 100%;
+    background: rgb(14, 2, 2);
+    transition: 2s;
+}
+.navegacion__opciones .menu > .menu-img{
+    height: 60px !important;
+    width: 56px !important;
+    padding: 2px !important;
+}
+.Separacion{
+    border: 1.3px solid rgba(222, 222, 222, 0.52);
+}
+.nota>p{
+    margin: 10px !important;
+    font-size: 16px !important;
+    text-align: justify !important;
+    letter-spacing: 1px !important;
+    background: transparent !important;
+}
+.busqueda> img{
+    width: 30px !important;
+}
+.busqueda{
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+}
+.menu-search{
+    position: absolute !important;
+    left:10px !important;
+    width: 20px !important; 
+    height: 30px !important;
+}
+.input-container input {
+    padding-left: 30px !important; 
+    height: 30px !important;
+}
+.busqueda >input{
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
+    background: transparent !important;
+    color: var(---texto) !important;
+    font-size: 1rem !important;
+    padding-left: 50px !important;
+
+}
+.busqueda >input:focus{
+    outline: none !important;
+    border: 2px solid var(---colorTerceario) !important;
+}
+.menu-perfil{
+    margin-right: 12px !important;
+}
+/*nav lateral*/
+.aside{
+    margin-left: none !important;
+    width: 5% !important;
+    height: 100vh !important;
+    background: #15466f !important;
+    box-sizing: border-box !important;
+}
+.aside__navegacion{
+    display: flex !important;
+    flex-direction: column !important;
+    gap:50px !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+}
+a{
+    text-decoration: none !important;
+    text-align: center !important;
+    color: var(---texto---) !important;
+    font-size: 0.8rem !important;
+
+}
+a>img{
+    width: 54px !important;
+    padding: 2px !important;
+}
+
+.aside-item{
+    margin-top: 24px !important;
+}
+
+section{
+    box-sizing: border-box !important;
+    margin: 1% !important; 
+    height: 860% !important;
+    background: transparent !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 3px #f9f4f4 !important;
+    padding: 12px !important;
+}
+.tables{
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px #f7f2f2;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+.tables__title{
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 12px;
+    letter-spacing: 1.1px;
+}
+.tables__form{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+label>input{
+    border: none;
+    background: transparent;
+    color: var(---texto);
+    margin: 12px;
+    padding: 12px;
+    border:2px solid var(---texto);
+    border-radius: 12px;
+}
+label>input:focus{
+    outline: none;
+    border:2px solid #113A5D;
+    border-radius: 12px;
+
+}
+.form__option{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap:2px;
+    align-items: center;
+}
+.form__option>.form-select{
+    padding: 12px;
+    margin: 12px;
+    background: transparent;
+    color: var(---texto);
+    margin-right: 12px;
+    border:2px solid var(---texto);
+    border-radius: 12px;
+}
+.form-select>.opition{
+    background: var(---colorSecundario);
+}
+.opition:focus{
+    outline: none;
+}
+.bootstrap{
+    margin-top: 12px;
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+
+    border-radius: 12px;
+}
+.centered{
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.table {
+    background-color: transparent !important;
+    border: none !important;
+}
+.table th {
+    background-color: transparent !important;
+    color: var(---texto) !important; 
+}
+
+.table td {
+    background-color: transparent !important;
+    border: none !important;
+    color: var(---texto) !important; 
+}
+.table thead {
+    background-color: transparent !important;
+}
+.bootstrap>div{
+    padding-top: 5px;
+    color: var(---texto);
+    width: 100%;
+}
+.bootstrap>h2{
+    padding-top: 22px;
+    padding-left: 24px;
+    font-weight: 800;
+    font-size: 2.3rem;
+}
+td {
+    padding: 10px;
+    width: auto;
+}
+section > #content-section{
+    box-sizing: border-box;
+    width: 100%;
+    height: 98%;
+    overflow: hidden;
+    box-shadow: none;
+    
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #71aceb !important;  
+    color: #fff; 
+    font-weight: 400;
+}
+.card, .card-header, .card-body {
+    background-color: transparent !important;
+    color: var(---texto) !important;
+    box-shadow: 0 0 3px #ffffff;
+    border-radius: 5px;
+}
+.registrar__buton{
+    padding: 12px;
+    border-radius: 12px;
+    color:var(---texto---);
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    border: 2px solid var(---texto);
+}
+.registrar__buton:focus{
+    outline: none;
+}
+.registrar__buton:hover{
+    background: #062743;
+    transition: 0.7s;
+}

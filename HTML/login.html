@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/css.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <div class="overlay">
+            <form>
+                <div class="con">
+                    <div class="image-container">
+                        <img src="../Imagenes/logo.png" alt="logo">
+                    </div>
+                    <header class="head-form">
+                        <h2>Iniciar sesion</h2>
+                        <p>Ingrese sus datos personales</p>
+                    </header>
+                    <br>
+                    <div class="field-set">
+                        <span class="input-item">
+                            <i class="fa fa-user-circle"></i>
+                        </span>
+                        <input class="form-input" id="txt-input" type="text" placeholder="e-mail" required>
+
+                        <br>
+                        <span class="input-item">
+                            <i class="fa fa-key"></i>
+                        </span>
+                        <input class="form-input" type="password" placeholder="contraseña" id="pwd"  name="contraseña" required>
+                        <span>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </span> 
+
+                        <br>
+                        <button class="log-in" type="button" onclick="window.location.href='calculo.html'">Ingresar</button>
+                    </div>
+                    <div class="other">
+                        <button class="btn submits frgt-pass" type="button" onclick="window.location.href='olvidar.html'">¿Olvidaste tu contraseña?</button>
+                        <button class="btn submits sign-up" type="button" onclick="window.location.href='Registrar.html'">Registrarse 
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

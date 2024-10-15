@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olvidaste tu contraseña</title>
+    <link rel="stylesheet" href="../CSS/reg.css">
+</head>
+<body>
+    <form>
+        <header>
+            <h2>Recuperar Contraseña</h2>
+            <p>Selecciona una opción para recuperar tu contraseña</p>
+        </header>
+        <div class="con">
+
+            <div class="input-item">
+                <label for="correo">Correo electrónico registrado</label>
+                <input class="form-input" id="txt-input" type="text" placeholder="Ingresa tu correo electrónico" required>
+                <span class="input-item">
+                  <i class="fa fa-key"></i>
+                </span>
+            </div>
+            <div class="input-item">
+                <label>Selecciona un método de recuperación</label>
+                <select class="form-input" id="metodo-recuperacion">
+                    <option value="sms">Enviar código por SMS (teléfono registrado)</option>
+                    <option value="llamada">Recibir código por llamada</option>
+                    <option value="correo-alternativo">Enviar código a otro correo electrónico</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="enviarCodigo()">Enviar código</button>
+
+            <div id="mensaje" style="display: none; text-align: center; margin-top: 20px; color: #F9F9F9;">
+                <p>El código ha sido enviado a tu método seleccionado.</p>
+            </div>
+
+            <!-- Opciones de ayuda adicionales -->
+            <div class="submits">
+                <button class="frgt-pass" type="button" onclick="reenviarCodigo()">Reenviar código</button>
+                <button class="sign-up" type="button" onclick="cambiarMetodo()">Cambiar método</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        // Simular el envío del código
+        function enviarCodigo() {
+            var metodo = document.getElementById("metodo-recuperacion").value;
+            var mensaje = document.getElementById("mensaje");
+            var correo = document.getElementById("txt-input").value;
+
+            // Validar que el correo contenga "@"
+            if (correo.includes("@")) {
+                // Mostrar mensaje de éxito al enviar el código
+                mensaje.style.display = "block";
+
+                // Cambiar el contenido del mensaje dependiendo del método seleccionado
+                switch (metodo) {
+                    case "sms":
+                        mensaje.innerHTML = "<p>El código ha sido enviado por SMS a tu teléfono registrado.</p>";
+                        break;
+                    case "llamada":
+                        mensaje.innerHTML = "<p>Recibirás una llamada con el código de verificación.</p>";
+                        break;
+                    case "correo-alternativo":
+                        mensaje.innerHTML = "<p>El código ha sido enviado a tu correo alternativo.</p>";
+                        break;
+                }
+            } else {
+                mensaje.style.display = "block";
+                mensaje.innerHTML = "<p>Por favor, ingresa un correo electrónico válido.</p>";
+            }
+        }
+
+        // Función para reenviar el código
+        function reenviarCodigo() {
+            var mensaje = document.getElementById("mensaje");
+            mensaje.innerHTML = "<p>El código ha sido reenviado.</p>";
+        }
+
+        // Función para cambiar el método de recuperación
+        function cambiarMetodo() {
+            var mensaje = document.getElementById("mensaje");
+            mensaje.style.display = "none";
+            document.getElementById("metodo-recuperacion").value = "";
+        }
+    </script>
+</body>
+</html>

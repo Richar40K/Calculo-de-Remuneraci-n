@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Trabajadores</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/reg.css"> 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+    <form>
+        <header>
+            <h2>Registrar Usuario</h2>
+            <p>Ingrese sus datos</p>
+        </header>
+
+        <div class="con">
+            <div class="input-item">
+                <label for="nombre">Nombres:</label>
+                <input id="nombre" type="text" class="form-input" placeholder="Nombre" required>
+            </div>
+            
+            <div class="input-item">
+                <label for="apellidos">Apellidos:</label>
+                <input id="apellidos" type="text" class="form-input" placeholder="Apellidos" required>
+            </div>
+            
+            <div class="input-item">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" type="text" class="form-input" placeholder="telefono" required>
+            </div>
+
+            <div class="input-item">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input id="fecha_nacimiento" type="date" class="form-input" required>
+            </div>
+
+            <div class="input-item">
+                <label for="correo">Correo Electrónico:</label>
+                <input id="correo" type="email" class="form-input" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <!-- CAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="TU_SITE_KEY"></div>
+
+            <button type="submit">Registrarse</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
